@@ -236,7 +236,25 @@
     
     // Simple SPA navigation (not needed for pure HTML)
     document.addEventListener('DOMContentLoaded', function() {
-      // You could add any JS functionality here
+      // Animation function to mimic framer-motion
+      const animateElements = document.querySelectorAll('.motion-div');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.getAttribute('data-animation');
+            if (animation) {
+              entry.target.classList.add(animation);
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+      
       console.log('Page loaded');
     });
   </script>
