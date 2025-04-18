@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Our Mission</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="w-full py-4 px-6 flex items-center justify-between bg-white/95">
+    <div class="flex items-center gap-4">
+      <button class="ghost-button">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="text-2xl">⛪</span>
+        <span class="font-semibold text-xl">CHURCH</span>
+      </a>
+    </div>
+    
+    <nav class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="hover:text-blue-600">HOME</a>
+      <a href="about.html" class="hover:text-blue-600">ABOUT</a>
+      <a href="contact.html" class="hover:text-blue-600">CONTACT US</a>
+      <a href="donation.html" class="hover:text-blue-600">DONATION</a>
+      <a href="subscription.html" class="hover:text-blue-600">SUBSCRIPTION</a>
+      <button class="bg-blue-100 text-blue-800 hover:bg-blue-200 px-4 py-2 rounded">
+        GO TO ACCOUNT
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 container mx-auto px-6 py-12">
+    <div class="motion-div" data-animation="fade-up">
+      <h1 class="text-4xl font-bold mb-4 text-center">Support Our Mission</h1>
+      <p class="text-gray-600 text-center">Your generous donations help us serve the community better.</p>
+    </div>
+
+    <div class="motion-div grid md:grid-cols-3 gap-8 mb-12 mt-12" data-animation="fade-up">
+      <div class="donation-option bg-white p-6 rounded-lg shadow-lg text-center">
+        <i data-lucide="heart" class="w-12 h-12 mb-4 mx-auto text-blue-600"></i>
+        <h3 class="text-xl font-semibold mb-2">One-time Donation</h3>
+        <p class="text-gray-600">Make a single contribution to support our cause</p>
+      </div>
+      
+      <div class="donation-option bg-white p-6 rounded-lg shadow-lg text-center">
+        <i data-lucide="credit-card" class="w-12 h-12 mb-4 mx-auto text-blue-600"></i>
+        <h3 class="text-xl font-semibold mb-2">Monthly Giving</h3>
+        <p class="text-gray-600">Set up recurring donations to provide sustained support</p>
+      </div>
+      
+      <div class="donation-option bg-white p-6 rounded-lg shadow-lg text-center">
+        <i data-lucide="wallet" class="w-12 h-12 mb-4 mx-auto text-blue-600"></i>
+        <h3 class="text-xl font-semibold mb-2">Special Projects</h3>
+        <p class="text-gray-600">Support specific initiatives and community programs</p>
+      </div>
+    </div>
+
+    <div class="motion-div max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg" data-animation="slide-up">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Make a Donation</h2>
+      <form class="space-y-6">
+        <div>
+          <label for="amount" class="block text-gray-700 mb-1">Amount (USD)</label>
+          <input id="amount" type="number" placeholder="Enter amount" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="name" class="block text-gray-700 mb-1">Name</label>
+          <input id="name" type="text" placeholder="Your name" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label for="email" class="block text-gray-700 mb-1">Email</label>
+          <input id="email" type="email" placeholder="Your email" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Donate Now</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Church</h3>
+        <p class="text-gray-400">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare cursus sed nunc eget dictum. Sed ornare cursus sed nunc eget dictum. Sed ornare cursus sed nunc eget dictum
+        </p>
+      </div>
+      
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+        <div class="flex flex-col gap-2">
+          <a href="about.html" class="text-gray-400 hover:text-white">About</a>
+          <a href="donation.html" class="text-gray-400 hover:text-white">Donation</a>
+          <a href="subscription.html" class="text-gray-400 hover:text-white">Subscription</a>
+          <a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Subscribe to our Newsletter</h3>
+        <div class="flex gap-2">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-2 rounded bg-gray-800 text-white"
+          />
+          <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-12 text-center text-gray-400">
+      <p>© 2025 church</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Animation function to mimic framer-motion
+    document.addEventListener('DOMContentLoaded', function() {
+      const animateElements = document.querySelectorAll('.motion-div');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animation = entry.target.getAttribute('data-animation');
+            entry.target.classList.add(animation);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+      
+      // Hover effect for donation options
+      const donationOptions = document.querySelectorAll('.donation-option');
+      donationOptions.forEach(option => {
+        option.addEventListener('mouseenter', function() {
+          this.classList.add('scale-105');
+        });
+        option.addEventListener('mouseleave', function() {
+          this.classList.remove('scale-105');
+        });
+      });
+      
+      // Form submission handler
+      const donationForm = document.querySelector('form');
+      if (donationForm) {
+        donationForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Thank you for your donation! We appreciate your support.');
+          donationForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
