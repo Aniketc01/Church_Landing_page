@@ -20,11 +20,11 @@ const MainSections = () => {
     <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto px-6 my-12">
       <MainSection 
         title="PRAYER" 
-        image="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png"
+        image="/lovable-uploads/d2052ca8-b9c0-4a15-9a3f-1b882de1c523.png"
       />
       <MainSection 
         title="BIBLE" 
-        image="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png"
+        image="/lovable-uploads/1221aaf4-792e-4e65-bd32-07192eb6f8ce.png"
       />
     </div>
   );
