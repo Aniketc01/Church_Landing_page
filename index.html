@@ -15,12 +15,246 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@4.1.17/dist/framer-motion.js"></script>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="w-full py-4 px-6 flex items-center justify-between bg-white/95">
+        <div class="flex items-center gap-4">
+          <button class="menu-btn">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>
+            </svg>
+          </button>
+          <a href="/" class="flex items-center gap-2">
+            <span class="text-2xl">⛪</span>
+            <span class="font-semibold text-xl">CHURCH</span>
+          </a>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/" class="hover:text-blue-600">HOME</a>
+          <a href="/about.html" class="hover:text-blue-600">ABOUT</a>
+          <a href="/contact.html" class="hover:text-blue-600">CONTACT US</a>
+          <a href="/donation.html" class="hover:text-blue-600">DONATION</a>
+          <a href="/subscription.html" class="hover:text-blue-600">SUBSCRIPTION</a>
+          <button class="bg-blue-100 text-blue-800 hover:bg-blue-200 px-4 py-2 rounded">
+            GO TO ACCOUNT
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Events Section -->
+        <div class="relative h-[300px] flex items-center justify-center text-white">
+          <div class="absolute inset-0 bg-black/50 z-0"></div>
+          <div class="absolute inset-0 bg-center bg-cover z-[-1]" 
+               style="background-image: url('/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png')">
+          </div>
+          
+          <div class="z-10 text-center">
+            <h1 class="text-5xl mb-8">Today's Events</h1>
+            <div class="flex flex-col items-center gap-4">
+              <div class="bg-white text-black px-6 py-2 rounded-full flex items-center gap-2">
+                30 NOV, 2023 | THURSDAY <span class="ml-2">→</span>
+              </div>
+              <div class="flex gap-4">
+                <button class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded text-white border border-white/20 hover:bg-white/20">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  EVENTS
+                </button>
+                <button class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded text-white border border-white/20 hover:bg-white/20">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                  GROUP
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Sections -->
+        <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto px-6 my-12">
+          <div class="relative h-[300px] overflow-hidden rounded-lg">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img src="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png" 
+                 alt="PRAYER" 
+                 class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-center z-20">
+              <h2 class="text-white text-4xl font-medium">PRAYER</h2>
+            </div>
+          </div>
+          <div class="relative h-[300px] overflow-hidden rounded-lg">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img src="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png" 
+                 alt="BIBLE" 
+                 class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 flex items-center justify-center z-20">
+              <h2 class="text-white text-4xl font-medium">BIBLE</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto px-6 my-8">
+          <button class="flex items-center gap-3 px-6 py-3 bg-gray-600/90 text-white rounded-lg hover:bg-gray-700/90 transition-colors">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            <span>Matrimony</span>
+          </button>
+          <button class="flex items-center gap-3 px-6 py-3 bg-gray-600/90 text-white rounded-lg hover:bg-gray-700/90 transition-colors">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>Stays</span>
+          </button>
+          <button class="flex items-center gap-3 px-6 py-3 bg-gray-600/90 text-white rounded-lg hover:bg-gray-700/90 transition-colors">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>Business</span>
+          </button>
+          <button class="flex items-center gap-3 px-6 py-3 bg-gray-600/90 text-white rounded-lg hover:bg-gray-700/90 transition-colors">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <span>Pilgrimage</span>
+          </button>
+          <button class="flex items-center gap-3 px-6 py-3 bg-gray-600/90 text-white rounded-lg hover:bg-gray-700/90 transition-colors">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <span>Parishioners</span>
+          </button>
+          <button class="flex items-center gap-3 px-6 py-3 bg-gray-600/90 text-white rounded-lg hover:bg-gray-700/90 transition-colors">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+            <span>Payment History</span>
+          </button>
+        </div>
+
+        <!-- Updates Section -->
+        <div class="bg-gray-100 py-16">
+          <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold mb-8 text-center">Daily Updates</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+              <!-- Update Card 1 -->
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img src="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png"
+                     alt="Church interior" 
+                     class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h3 class="font-semibold mb-2">The Seven Churches of Revelation</h3>
+                  <p class="text-sm text-gray-600 mb-4">
+                    In The Book Of Revelation In Chapters 2 And 3, Jesus Addresses Seven Letters To Seven Churches...
+                  </p>
+                  <button class="text-blue-600 text-sm hover:underline">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <!-- Update Card 2 -->
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img src="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png"
+                     alt="Church interior" 
+                     class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h3 class="font-semibold mb-2">The Seven Churches of Revelation</h3>
+                  <p class="text-sm text-gray-600 mb-4">
+                    In The Book Of Revelation In Chapters 2 And 3, Jesus Addresses Seven Letters To Seven Churches...
+                  </p>
+                  <button class="text-blue-600 text-sm hover:underline">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <!-- Update Card 3 -->
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img src="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png"
+                     alt="Church interior" 
+                     class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h3 class="font-semibold mb-2">The Seven Churches of Revelation</h3>
+                  <p class="text-sm text-gray-600 mb-4">
+                    In The Book Of Revelation In Chapters 2 And 3, Jesus Addresses Seven Letters To Seven Churches...
+                  </p>
+                  <button class="text-blue-600 text-sm hover:underline">
+                    Read more
+                  </button>
+                </div>
+              </div>
+              <!-- Update Card 4 -->
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img src="/lovable-uploads/c4a3ac42-b850-4fd2-99a5-8bc62d471a5f.png"
+                     alt="Church interior" 
+                     class="w-full h-48 object-cover" />
+                <div class="p-4">
+                  <h3 class="font-semibold mb-2">The Seven Churches of Revelation</h3>
+                  <p class="text-sm text-gray-600 mb-4">
+                    In The Book Of Revelation In Chapters 2 And 3, Jesus Addresses Seven Letters To Seven Churches...
+                  </p>
+                  <button class="text-blue-600 text-sm hover:underline">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Church</h3>
+            <p class="text-gray-400">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare cursus sed nunc eget dictum. Sed ornare cursus sed nunc eget dictum. Sed ornare cursus sed nunc eget dictum
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+            <div class="flex flex-col gap-2">
+              <a href="/about.html" class="text-gray-400 hover:text-white">About</a>
+              <a href="/donation.html" class="text-gray-400 hover:text-white">Donation</a>
+              <a href="/subscription.html" class="text-gray-400 hover:text-white">Subscription</a>
+              <a href="/contact.html" class="text-gray-400 hover:text-white">Contact Us</a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Subscribe to our Newsletter</h3>
+            <div class="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="flex-1 px-4 py-2 rounded bg-gray-800 text-white"
+              />
+              <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center text-gray-400">
+          <p>© 2025 church</p>
+        </div>
+      </footer>
+    </div>
+
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
